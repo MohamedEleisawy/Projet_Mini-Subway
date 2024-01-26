@@ -1,0 +1,57 @@
+*,::after,::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#jeu{
+    /* création du conteneur rectangulaire */
+    width: 400px;
+    height: 650px;
+    /* centré */
+    margin: auto;
+    /* délémitaiton */
+    border: 1px solid black;
+    /* dégradé de couleur  */
+    background-image:linear-gradient(to bottom, #00c774, #ffffff);
+    position: relative;
+    /* espacé du haut */
+    top: 2.8em; 
+    overflow: hidden;
+}
+#joueur{
+    /* pour etre carre */
+    width: 100px ;
+    height:100px ;
+    background-color: greenyellow;
+    /* Pour qu'il soit en mouvement  */
+    position:absolute;
+    /* Pour centrer le bloc */
+    left:150px; 
+    top: 549px; 
+}
+#bloc{
+    width: 100px ;
+    height:100px ;
+    background-color: black;
+    /* Pour qu'il soit en mouvement  */
+    position:absolute;
+    left:150px; 
+    top: -100px;
+    /* nom, durée, sens , ittération  */
+    animation: mouvmentBas .9s linear infinite;
+}
+@keyframes mouvmentBas {
+    0%{
+        top:-100px;
+    }
+    100%{
+        top:100%;
+    }
+}
+#score{
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 3em;
+    padding-top: 10px;
+}
