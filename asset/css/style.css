@@ -1,0 +1,92 @@
+*, ::after, ::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#jeu {
+    width: 400px;
+    height: 650px;
+    margin: auto;
+    border: 1px solid black;
+    background-image: linear-gradient(to bottom, #00c774, #ffffff);
+    position: relative;
+    top: 2.8em;
+    overflow: hidden;
+}
+
+#joueur {
+    width: 100px;
+    height: 100px;
+    background-color: greenyellow;
+    position: absolute;
+    left: 150px;
+    top: 549px;
+}
+
+#bloc {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    position: absolute;
+    left: 150px;
+    top: -100px;
+    animation: mouvmentBas .9s linear infinite;
+}
+
+@keyframes mouvmentBas {
+    0% {
+        top: -100px;
+    }
+    100% {
+        top: 100%;
+    }
+}
+
+#score {
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 3em;
+    padding-top: 10px;
+}
+
+.btns {
+    display: none;
+}
+
+@media screen and (max-width: 668px) {
+    #jeu {
+        width: 300px;
+        height: 487.5px;
+    }
+    #joueur {
+        width: 55px;
+        height: 55px;
+        top: 435px;
+    }
+    #bloc {
+        width: 55px;
+        height: 55px;
+    }
+    #score {
+        font-size: 2em;
+    }
+    .btns {
+        display: flex;
+        margin-top: 10px;
+        justify-content: center;
+    }
+    .btn {
+        background-color: #00c774;
+        color: white;
+        padding: 10px 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 60px 20px 0px 20px;
+    }
+    .btn:hover {
+        background-color: #00a65a;
+    }
+}
