@@ -14,7 +14,6 @@ function mouvGauche(){
 if (gauche <= 0) {
    return;  // Ne rien faire si le joueur est déjà à gauche
 }
-
 //prend la position actuelle à gauche et en soustrayant 150 pixels.
 const nv_gauche = gauche - 150;
     // met à jour la propriété CSS left de l'élément joueur avec la nouvelle position calculée (nv_gauche).
@@ -29,11 +28,6 @@ function mouvDroite(){
         return;
      }
     //  fais une condition si l'ecran est inféruer à 668px
-    if(window.innerWidth <= 668){
-        if (droite >= 200) { // // Ne rien faire si le joueur est déjà à droite
-            return;
-         }
-    }
     const nv_droite = droite + 150;
     joueur.style.left = nv_droite + "px";
 }
