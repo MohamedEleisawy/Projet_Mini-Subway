@@ -1,3 +1,5 @@
+// charger le dom 
+document.addEventListener('DOMContentLoaded', function(){
 "use strict";
 // Récupération des éléments du DOM
 const joueur = document.getElementById('joueur');
@@ -24,7 +26,7 @@ const nv_gauche = gauche - 150;
 
 function mouvDroite(){    
     const droite = parseInt(window.getComputedStyle(joueur).getPropertyValue("left"));
-    if (droite >= 300) { // // Ne rien faire si le joueur est déjà à droite
+    if (droite >= 300) {  // Ne rien faire si le joueur est déjà à droite
         return;
      }
     //  fais une condition si l'ecran est inféruer à 668px
@@ -66,3 +68,4 @@ setInterval(()=>{
         
     }
 },1);
+});

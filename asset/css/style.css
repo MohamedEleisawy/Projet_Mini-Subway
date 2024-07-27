@@ -57,13 +57,13 @@
 
 @media screen and (max-width: 668px) {
     #jeu {
-        width: 300px;
-        height: 487.5px;
+        width: 77%;
+        height: 75vh;
     }
     #joueur {
         width: 55px;
         height: 55px;
-        top: 435px;
+        top: 490px;
     }
     #bloc {
         width: 55px;
